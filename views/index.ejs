@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> </title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+</head>
+<body>
+  <!-- 导航栏 -->
+  <div class="nav">
+    <div class="page-header">
+      <h1>Sobook</h1>
+    </div>
+</div>
+
+
+
+
+
+  <!-- 状态栏 -->
+  <div class="flag">
+    <div class="container">
+      <% if (islogin) { %>
+       <!-- 登录状态 -->
+      <div class="login">
+        <p>welcome <%= uname %></p>
+        <a href="/logout">退出登录</a>
+      </div>
+      <% } else { %>
+        <!-- 非登录状态 -->
+        <div class="unlog">
+          <p>您还没有登录</p>
+          <a href="login">登录页面</a>
+        </div>
+      <% } %>
+      
+    </div>
+  </div>
+
+
+
+
+  <!-- banner -->
+  <div class="banner ">
+    <div class="container ">
+      <ul class="left" >
+        <a href="" class="list-unstyled list-inline link_1">
+           <% catas.forEach(item => { %>
+            <li class=""> <%= item %></li>
+           <% }) %>
+          </a>
+      </ul>
+
+      <div class="right">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 图书信息 -->
+  <div class="book">
+    <div class="container">
+
+      <div class="left">
+        <ul class="row">
+      
+          <% books.forEach(item => { %>
+            <a href="#" class="">
+            <li>
+              <img src="<%= item.bookimg %>" alt="">
+              <div class="tag"><%= item.tag %></div>
+              <div class="auth"><%= item.author %></div>
+              <div class="cat"><%= item.cataory %></div>
+            </li>
+           
+
+            </a>
+            <% }) %>
+        </ul>
+
+
+
+      </div>
+<!-- -------------------------------- -->
+      <div class="right">
+          
+        <% books.forEach(item => { %>
+          <a href="#">
+          <li>
+            <%= item.bookname %>
+          </li>
+         
+
+          </a>
+          <% }) %>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- <script>
+  var lis = document.querySelectorAll('.book a')
+  if(lis.length>20){
+    for (let i = 21; i < lis.length; i++) {
+      lis[i].className = 'hidden'
+    }
+  }
+</script> -->
+</html>

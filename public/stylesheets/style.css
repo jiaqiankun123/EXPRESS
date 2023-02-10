@@ -1,0 +1,83 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;} 
+body{background:#fff;color:#333;font-size:12px; margin-top:5px;font-family:"SimSun","宋体","Arial Narrow";} 
+ 
+ul,ol{list-style-type:none;} 
+select,input,img,select{vertical-align:middle;} 
+ 
+a{text-decoration:none;} 
+a:link{color:#009;} 
+a:visited{color:#800080;} 
+a:hover,a:active,a:focus{color:#c00;text-decoration:underline;} 
+/* 自定义全局样式 */
+.container{width: 880px;margin: 0 auto; background-color: rgb(247, 108, 196,.2);}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.hidden{
+display: none;
+}
+
+
+/* 顶部 */
+.nav{
+  text-align: center;
+  background-color: pink;
+}
+/* ------------------------------------------------ */
+
+
+
+/* 状态栏 */
+/* -------------------------------------------------- */
+
+
+/* banner */
+/* 左: */
+.banner .left{
+  width: 566px; background-color: red;
+  line-height: 50px;
+}
+/* 右 */
+.banner .right{
+  width: 294px;
+}
+ .banner .right input{
+  width: 150px;
+  vertical-align: text-bottom;margin-bottom: 2px;
+  float: left;
+} 
+/* ---------------------------------------------------- */
+
+
+
+/* 图书信息 */
+/* 左 */
+.book .row{
+  width: 550px;background-color: rgb(192, 219, 219);
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: space-around;
+}
+.book .row a{
+  width: 150px ;
+  height: 200px;
+  background-color: rgb(133, 5, 5,.3);
+  margin-bottom: 8px;
+  position: relative;
+}
+.book .row img{
+  width: 130px;height: 150px;
+}
+.book .row .cat{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0,.3);
+  color: #fff;
+}
+
+
+

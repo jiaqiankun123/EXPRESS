@@ -1,0 +1,37 @@
+    <% books.forEach(item => { %>
+            <li>
+              <img src="<%= item.bookimg %>" alt="">
+              <div class="tag"><%= item.tag %></div>
+              <div class="auth"><%= item.author %></div>
+              <div class="cat"><%= item.cataory %></div>
+            </li>
+            <a href="#">
+
+            </a>
+            <% }) %>
+
+
+
+
+
+
+
+            <div class="flag">
+                <div class="container">
+                  <% if (islogin) { %>
+                   <!-- 登录状态 -->
+                  <div class="login">
+                    <p>welcome <%= uname %></p>
+                    <a href="/logout">退出登录</a>
+                  </div>
+                  <% } else { %>
+                    <!-- 非登录状态 -->
+                    <div class="unlog">
+                      <p>ooooooooooooo</p>
+                      <a href="login">登录页面</a>
+                    </div>
+                  <% } %>
+                  
+                </div>
+              </div>
+            
